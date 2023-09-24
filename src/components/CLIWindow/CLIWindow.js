@@ -1,7 +1,7 @@
 // CLIWindow.js
 import React, { useState, useRef } from 'react';
-import { tokenize } from '../../interpreter/lexer';
-import { parseExpression, printSyntaxTree } from '../../interpreter/parser';
+//import { tokenize } from '../../interpreter/lexer';
+//import { parseExpression, printSyntaxTree } from '../../interpreter/parser';
 import { executeSyntaxTree } from '../../interpreter/executor';
 import './CLIWindow.css';
 import LineNumberedTextArea from './LineNumberedTextArea/LineNumberedTextArea';
@@ -10,6 +10,9 @@ function CLIWindow() {
   // State to manage the expansion/collapse of the terminal
   const [isExpanded, setIsExpanded] = useState(false);
   const [tokens, setTokens] = useState([]);
+
+  const { tokenize } = require('../../interpreter/lexer');
+  const { parseExpression, printSyntaxTree } = require('../../interpreter/parser');
 
   const containerRef = useRef(null);
 
