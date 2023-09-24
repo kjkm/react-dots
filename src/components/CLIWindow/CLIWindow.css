@@ -1,0 +1,49 @@
+/* TerminalWindow.css */
+.terminal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 500px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #00ff00; /* Green border for the terminal */
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    display: flex; /* Add this to use flexbox layout */
+    flex-direction: column; /* Column layout for terminal content and button */
+  }
+  
+  .terminal.expanded {
+    width: 500px;
+    height: 300px; /* Adjust the expanded height as needed */
+  }
+  
+  .terminal button {
+    background-color: transparent;
+    color: #00ff00; /* Green text for the expand/collapse button */
+    border: none;
+    cursor: pointer;
+    margin-left: auto; 
+  }
+
+  .text-editor {
+    flex-grow: 1; /* Allow the text editor to fill available space */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    resize: none; /* Disable text area resizing */
+    font-family: monospace; /* Optional: Use a monospace font for a terminal-like appearance */
+    white-space: pre; /* Preserve line breaks and spaces */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
+  
+  .line-numbered {
+    display: flex;
+  }
+  
+  .line-number {
+    width: 30px; /* Adjust the width of the line number column */
+    color: #00ff00; /* Line number color */
+  }
